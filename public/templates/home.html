@@ -1,0 +1,35 @@
+
+
+<nav class="navbar navbar-default">
+ 
+      <a class="navbar-brand" href="#" ng-click="toggleMenu()" >Mirrodin</a>
+   
+
+<ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Emails <span class="badge">{{emails}}</span></a></li>
+     &nbsp&nbsp&nbsp </ul>
+
+</nav>
+	
+
+
+
+<div class="list-group">
+  <a href="#" class="list-group-item active">
+    Calendar
+  </a>
+  <a href="{{item.url}}" class="list-group-item" ng-repeat="item in events">
+
+<div class="media-left">
+  
+      <img class="media-object" src="{{item.img}}" alt="...">
+   
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{item.title}} @ {{item.time}} - {{item.date}} </h4>
+    {{item.text}}
+    <h6>from {{item.orgin}}</h6>
+  </div>
+
+  </a>
+</div>
